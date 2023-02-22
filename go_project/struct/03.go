@@ -32,12 +32,16 @@ func (p Person) Dream() {
 	fmt.Printf("%s的梦想是学好go语言\n", p.name) //张三的梦想是学好go语言
 }
 
-// 指针类型的接收者
+// 指针类型的接收者（可以修改变量本身）
 // 新建一个方法修改年龄
 func (p *Person) setAge(newAge int8) {
 	p.age = newAge
 }
 
+// 值类型的接收者（无法修改变量本身，修改操作只是针对副本）
+func (p Person) setCiy(newCity string) {
+	p.city = newCity
+}
 func main() {
 	//调用构造函数
 	p1 := newPerson("张三", "沙河", 90)
@@ -47,4 +51,6 @@ func main() {
 	p1.Dream()
 	p1.setAge(30)       //修改年龄
 	fmt.Println(p1.age) //30
+	p1.setCiy("北京")
+	fmt.Println(p1.city) //沙河 ，仍然是沙河，没有变化
 }
