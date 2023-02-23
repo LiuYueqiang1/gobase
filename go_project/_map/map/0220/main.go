@@ -131,6 +131,7 @@ func mapsl() {
 	mapSlice[key] = value
 	fmt.Println(mapSlice)
 }
+
 func main() {
 	mapsl()
 }

@@ -3,9 +3,9 @@ package main
 import "fmt"
 
 //匿名函数
-// func(参数)(返回值){
-//     函数体
-// }
+//func(参数)(返回值){
+//    函数体
+//}
 
 func main() {
 	// 将匿名函数保存到变量
