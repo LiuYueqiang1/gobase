@@ -9,6 +9,7 @@ type student struct {
 	Class string
 }
 
+// 学生的构造函数
 func newStudent(name, class string, id int, age int) *student {
 	return &student{
 		Name:  name,
